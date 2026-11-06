@@ -1,3 +1,4 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,11 +21,19 @@ spec:
           env:
             - name: PORT
               value: "5000"
+
             - name: NODE_ENV
               value: "production"
+
             - name: MONGO_URI
               value: "mongodb://mongodb-service:27017/ecommerce"
+
             - name: REDIS_URL
               value: "redis://redis-service:6379"
+
+            - name: CLIENT_URL
+              value: "http://100.73.198.115:30003"
+
             - name: JWT_SECRET
               value: "change-this-demo-secret"
+
