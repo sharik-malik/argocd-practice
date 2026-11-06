@@ -18,6 +18,7 @@ spec:
           image: 70madmax07/ecommerce-api:latest
           ports:
             - containerPort: 5000
+
           env:
             - name: PORT
               value: "5000"
@@ -34,6 +35,21 @@ spec:
             - name: CLIENT_URL
               value: "http://100.73.198.115:30003"
 
-            - name: JWT_SECRET
-              value: "change-this-demo-secret"
+            - name: JWT_ACCESS_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ecommerce-jwt
+                  key: JWT_ACCESS_SECRET
+
+            - name: JWT_REFRESH_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ecommerce-jwt
+                  key: JWT_REFRESH_SECRET
+
+            - name: JWT_ACCESS_EXPIRES
+              value: "15m"
+
+            - name: JWT_REFRESH_EXPIRES
+              value: "7d"
 
