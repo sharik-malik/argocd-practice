@@ -3,9 +3,11 @@ kind: Service
 metadata:
   name: redis-service
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: redis
   ports:
-    - port: 6379
+    - protocol: TCP
+      port: 6379
       targetPort: 6379
+      nodePort: 30005

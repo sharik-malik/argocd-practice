@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: ecommerce-api
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: ecommerce-api
   ports:
     - protocol: TCP
       port: 5000
       targetPort: 5000
+      nodePort: 30004
