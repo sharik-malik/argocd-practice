@@ -1,0 +1,23 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: freshmart
+  labels:
+    app: freshmart
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: freshmart
+  template:
+    metadata:
+      labels:
+        app: freshmart
+    spec:
+      containers:
+        - name: freshmart
+          image: sharikm/freshmart-storefront:v1
+          ports:
+            - containerPort: 80
+

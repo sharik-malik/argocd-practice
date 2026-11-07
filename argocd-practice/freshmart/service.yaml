@@ -1,0 +1,18 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: freshmart-service
+  labels:
+    app: freshmart
+spec:
+  type: NodePort
+  selector:
+    app: freshmart
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+      nodePort: 30007
+      protocol: TCP
+
