@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshMart — Everyday essentials</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">F</span> freshmart</a>
+    <nav><a href="#shop">Shop</a><a href="#offers">Offers</a><a href="#about">About</a></nav>
+    <button class="cart-button" id="cartButton">Cart <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="offers">
+      <div class="hero-copy">
+        <p class="eyebrow">FRESH PICKS · EVERY DAY</p>
+        <h1>Good sharik.<br><em>Good malik.</em></h1>
+        <p class="hero-text">Fresh finds and everyday favourites, delivered straight to your door.</p>
+        <a class="primary-button" href="#shop">Shop collection <span>→</span></a>
+      </div>
+      <div class="hero-art">
+        <div class="sun"></div>
+        <div class="fruit fruit-one">🍊</div><div class="fruit fruit-two">🥑</div>
+        <div class="fruit fruit-three">🍓</div><div class="fruit fruit-four">🥬</div>
+        <div class="hero-note">Fresh<br>every day</div>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE GOOD STUFF</p><h2>Shop favourites</h2></div>
+        <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search products"></label>
+      </div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="All">All items</button>
+        <button class="filter" data-category="Fruit">Fruit</button>
+        <button class="filter" data-category="Vegetables">Vegetables</button>
+        <button class="filter" data-category="Pantry">Pantry</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="banner" id="about">
+      <div><p class="eyebrow">A LITTLE BETTER, EVERY DAY</p><h2>Fresh choices<br>made simple.</h2></div>
+      <p>Thoughtful everyday essentials, friendly prices, and a little more joy in every basket.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">F</span> freshmart</a><span>Made for your everyday.</span><span>© 2026 FreshMart</span></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
