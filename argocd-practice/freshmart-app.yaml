@@ -1,0 +1,21 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: freshmart
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/sharik-malik/argocd-practice.git
+    targetRevision: main
+    path: freshmart
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
