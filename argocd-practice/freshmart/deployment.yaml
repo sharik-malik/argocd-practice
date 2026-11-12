@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: freshmart
-          image: sharikm/freshmart-storefront:782c184
+          image: sharikm/freshmart-storefront:f989028
           ports:
             - containerPort: 80
 
