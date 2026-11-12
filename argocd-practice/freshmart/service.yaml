@@ -1,4 +1,3 @@
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -6,13 +5,12 @@ metadata:
   labels:
     app: freshmart
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: freshmart
   ports:
     - name: http
       port: 80
       targetPort: 80
-      nodePort: 30007
       protocol: TCP
 
