@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/sharik-malik/argocd-practice.git
     targetRevision: main
-    path: freshmart
+    path: argocd-practice/freshmart
   destination:
     server: https://kubernetes.default.svc
     namespace: default
